@@ -1,33 +1,120 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>CSS grid </title>
-    <style>
-        .wrapper {
-            width: 100%;
-	        margin: 0 auto;
-        }
+<style>
+.item1 { grid-area: header; }
+.item3 { grid-area: main; }
+.item5 { grid-area: footer; }
 
-     
-      
 
-    </style>
+#content1 {
+    position: relative;
+}
+#content1 img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 325px;
+    width: 325px;
 
-</head>
+}
+#content2 {
+    position: relative;
+}
+#content2 img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 325px;
+    width: 325px;
 
-<body>
-    <div class="wrapper">
-        <div>
-                <img src="grupo_8.png" alt="imaginaKIDS" width="1300" height="639" class="imagemfundo">
-           
+}
+#content3 {
+    position: relative;
+}
+#content3 img {
+    position: absolute;
+    top: 500px;
+    left: 0px;
+    height: 325px;
+    width: 325px;
 
-        </div>
+}
+#content4 {
+    position: relative;
+}
+#content4 img {
+    position: absolute;
+    top: 500px;
+    right: 0px;
+    height: 325px;
+    width: 325px;
 
-    </div>
-
+}
+#content5 {
+    position: relative;
+}
+#content5 img {
+  display: block;
+  position:relative;
+  left:45%;
+  top: 250px
+  transform: translate(-50%, -50%);
+}
+.grid-container {
+  display: grid;
+  grid-template-areas:
     
+    'main main main main main main'
+    'footer footer footer footer footer footer';
+  grid-gap: 10px;
+
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.item3{
+    background-color:#e9e9e9;
+}
+</style>
+</head>
+<body>
+
+
+<div class="grid-container">
+  
+
+
+  <div class="item3">
+      <div id="content1">
+          <img src="1.png" >
+      </div>
+      <div id="content2">
+        <img src="3.png" >
+    </div>
+    <div id="content3">
+        <img src="2.png" >
+    </div>
+    <div id="content4">
+        <img src="4.png" >
+    </div>
+    <div id="content5">
+        <img src="livro.png" >
+    </div>
+        <p>OPS!</p>
+        <p>Alguns livros se perdem por aí, é mais comum</p>
+        <p>do que você imagina. Infelizmente o seu foi</p>
+        <p>um deles.</p>
+  </div>  
+
+  <div class="item5">Footer</div>
+</div>
 
 </body>
-
 </html>
