@@ -17,6 +17,10 @@
     left: 0px;
     height: 325px;
     width: 325px;
+    max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto
 
 }
 #content2 {
@@ -28,6 +32,12 @@
     right: 0px;
     height: 325px;
     width: 325px;
+    height: 325px;
+    width: 325px;
+    max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto
 
 }
 #content3 {
@@ -39,6 +49,12 @@
     left: 0px;
     height: 325px;
     width: 325px;
+    height: 325px;
+    width: 325px;
+    max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto
 
 }
 #content4 {
@@ -50,6 +66,12 @@
     right: 0px;
     height: 325px;
     width: 325px;
+    height: 325px;
+    width: 325px;
+    max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto
 
 }
 #content5 {
@@ -61,6 +83,12 @@
   left:45%;
   top: 250px
   transform: translate(-50%, -50%);
+  height: 325px;
+    width: 325px;
+    max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto
 }
 .grid-container {
   display: grid;
@@ -70,13 +98,13 @@
     'footer footer footer footer footer footer';
   grid-gap: 10px;
 
-  padding: 10px;
+  /*padding: 10px;*/
 }
 
 .grid-container > div {
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
-  padding: 20px 0;
+  /*padding: 10px 0;*/
   font-size: 30px;
 }
 
@@ -85,11 +113,21 @@
 }
 
 
+
 @media only screen and (max-width:620px) {
   /* For mobile phones: */
   .menu, .main, .right {
-    width:50%;
+    width:100%;
   }
+
+img { max-width: 100%; }
+
+html { font-size:100%; }
+
+@media (min-width: 640px) {
+     body {font-size:1rem;}
+    } 
+
 </style>
 </head>
 <body>
@@ -101,25 +139,35 @@
 
   <div class="item3">
       <div id="content1">
-          <img src="1.png" >
+          <img src="1.png" 
+            data-src-100px="image-100px.jpg"
+            alt=""
+          >
+
       </div>
+
       <div id="content2">
         <img src="3.png" >
-    </div>
-    <div id="content3">
+     </div>
+
+      <div id="content3">
         <img src="2.png" >
-    </div>
-    <div id="content4">
+      </div>
+
+      <div id="content4">
         <img src="4.png" >
-    </div>
-    <div id="content5">
+      </div>
+
+      <div id="content5">
         <img src="livro.png" >
-    </div>
+      </div>
+
         <p>OPS!</p>
         <p>Alguns livros se perdem por aí, é mais comum</p>
         <p>do que você imagina. Infelizmente o seu foi</p>
         <p>um deles.</p>
-  </div>  
+
+    </div>  
 
   <div class="item5">Footer</div>
 </div>
